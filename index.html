@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Katane shop</title>
+	<link rel="stylesheet" href="index.css">
+	<link rel="icon" href="preuzimanje.png" type="image/x-icon">
+</head>
+<body>
+	  <header>
+		<div id="pocne">
+			<h1>Premijum Shop</h1> <br>
+			<p>Katana, Knives</p>
+		</div>
+		</header>
+	<div id="meni">
+		    <div class="menu-icon" id="menu-icon">
+        <div class="line" id="line1"></div>
+        <div class="line" id="line2"></div>
+    </div>
+
+    <div class="overlay" id="overlay"></div>
+    
+    <div class="menu" id="menu">
+        <ul>
+            <li><a href="indep.html">Početna</a></li>
+            <li><a href="#">O nama</a></li>
+            <li><a href="#">Usluge</a></li>
+            <li><a href="#">Kontakt</a></li>
+        </ul>
+    </div>
+	</div>
+
+ <div class="topprodaja">
+ 	<p>Top Prodaja</p>
+ </div>	
+	
+	<div class="articli">
+	<div id="katana">
+		<a href="" id="katana">
+			
+			
+			<p>Katana</p>
+			<input type="button" value="KUPI">
+		</a>
+		</div>
+		
+				<a href="" id="noz">
+		
+		
+					<p>noz</p>
+					<input type="button" value="KUPI">
+				</a>
+				
+	</div>
+	
+	<script>
+const menuIcon = document.getElementById('menu-icon');
+const menu = document.getElementById('menu');
+const overlay = document.getElementById('overlay');
+
+menuIcon.addEventListener('click', () => {
+    // Otvaranje/zatvaranje menija
+    menuIcon.classList.toggle('open');
+    menu.classList.toggle('open');
+    overlay.classList.toggle('open'); // Prikaz/skrivanje overlay sloja
+});
+
+// Zatvaranje menija kada klikneš na overlay
+overlay.addEventListener('click', () => {
+    menu.classList.remove('open');
+    menuIcon.classList.remove('open');
+    overlay.classList.remove('open'); // Skriva overlay sloj
+});
+      		
+	</script>
+</body>
+</html>
